@@ -1,4 +1,4 @@
-name: CI Pipleline
+name: CI Pipeline
 
 on:
   push:
@@ -12,13 +12,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      
+
       - name: Install dependencies
-        run: npm install 
+        run: npm install
 
       - name: Run linter
         run: npm run lint || true
